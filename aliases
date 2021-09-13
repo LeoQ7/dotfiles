@@ -1,0 +1,77 @@
+#!/usr/bin/env fish
+
+# http://askubuntu.com/questions/22037/aliases-not-available-when-using-sudo
+alias sudo="sudo "
+
+# ubuntu update & upgrade
+alias uu="sudo apt update && sudo apt upgrade -y"
+alias uua="sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y"
+
+# trash-cli
+alias rm="trash"
+
+# clear
+alias q="cd ~ && clear"
+
+# wsl open
+alias open="explorer.exe"
+
+# vi
+alias vi="nvim"
+alias vim="nvim"
+
+# python
+alias py="ipython"
+alias py3="ipython3"
+alias pydocserver="python3 -m pydoc -p 8080"
+alias http="python -m http.server 8080"
+
+# tmux
+alias tmuxa='tmux a -t daily || tmux new -s daily'
+alias tless='tmux splitw -dI'  # Usage: make 2>&1 | tless &
+
+# web page with all assets
+alias getpage="wget --no-clobber --page-requisites --html-extension --convert-links --no-host-directories"
+# file with original filename
+alias get="curl -O -L"
+
+# alias from oh-my-zsh
+# alias '-' 'cd -'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+alias 0='cd ~/cc/0'
+alias 1='cd -'
+alias 2='prevd 2'
+#alias 3='cd -3'
+#alias 4='cd -4'
+#alias 5='cd -5'
+#alias 6='cd -6'
+#alias 7='cd -7'
+#alias 8='cd -8'
+#alias 9='cd -9'
+
+# rust cli tools
+abbr ls exa
+function l --description 'Using exa for l'
+    exa -lgaa $argv
+end
+function ll --description 'Using exa for ll'
+    exa -lg $argv
+end
+function la --description 'Using exa for la'
+    exa -lga $argv
+end
+function laa --description 'Using exa for laa'
+    exa -lgaa $argv
+end
+function lt --description 'List file in tree'
+    exa -RT $argv
+end
+function llt --description 'List file in long mode tree'
+    exa -lRT $argv
+end
+
+abbr du dua
+abbr cat bat

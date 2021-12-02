@@ -41,7 +41,7 @@ install-linux-packages() {
     sudo apt install -y libgit2-dev rustc rbenv
 }
 
-setup-omz() {
+setup-omf() {
     echo "-----------------------------------------------------------"
     echo "* Installing OMF... "
     echo "-----------------------------------------------------------"

@@ -6,6 +6,21 @@
 [ -f /etc/module/init/fish ]; and source /usr/local/opt/modules/init/fish
 export MODULESPATH=$HOME/software/modulefiles
 
+## Move
+set -gx PATH $PATH "$HOME/.dotnet/tools"
+set -x Z3_EXE "$HOME/bin/z3"
+set -x CVC5_EXE "$HOME/bin/cvc5"
+set -x BOOGIE_EXE "$HOME/.dotnet/tools/boogie"
+
+## Solana
+set -gx PATH $PATH "$HOME/.local/share/solana/install/active_release/bin"
+
+## V8
+set -gx PATH $PATH "$HOME/depot_tools"
+
+## Golang
+set -gx PATH $PATH "/usr/local/go/bin"
+
 ## Java
 set -gx PATH $PATH "$HOME/.jenv/bin"
 status --is-interactive; and source (jenv init -|psub)
